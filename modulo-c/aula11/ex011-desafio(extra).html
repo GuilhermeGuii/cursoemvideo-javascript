@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Nacionalidade</title>
+</head>
+
+<body>
+    <h1>Você é Brasileiro?</h1>
+
+    <label for="txtpais">De qual país você é: </label>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="submit" value="Verificar" id="check">
+    <p id="res">
+
+    </p>
+
+    <script> // Script do Desafio
+        var pais = document.querySelector('input#txtpais');
+        var res = document.querySelector('p#res');
+        var check = document.querySelector('input#check');
+
+        check.addEventListener('click', verificar);
+
+        function verificar() {
+            var paisV = String(pais.value);
+
+            if (paisV == 'Brasil') {
+                res.innerHTML = 'Você é um(a) <strong>Brasileiro(a)</strong>';
+            } else {
+                res.innerHTML = 'Você é um(a) estrangeiro(a)';
+            }
+        }
+    </script>
+</body>
+
+</html>
